@@ -1,14 +1,33 @@
-import { Boss } from './Boss/index';
-import { Character } from './Character/index';
-import { Class } from './Class/index';
-import { Craft } from './Craft/index';
-import { Hunt } from './Hunt/index';
-import { Inventory } from './Inventory/index';
-import { Shop } from './Shop/index';
-import { Skill } from './Skill/index';
+import Boss from './Boss';
+import Character from './Character';
+import Class from './Class';
+import Constructor from './Constructor';
+import Craft from './Craft';
+import Hunt from './Hunt';
+import Inventory from './Inventory';
+import Shop from './Shop';
+import Skill from './Skill';
+import Validator from './Validator';
+
+import {
+    FightToBoss,
+    GroupFightToBoss,
+
+    GetDropFromBoss,
+    GetFullDropFromBoss,
+    AddDropToBoss,
+    RemoveBossDrop,
+
+    GetBossFromName,
+    GetBossFromLevel,
+    GetAllBoss,
+    AddNewBoss,
+    AlterBoss,
+    RemoveBoss,
+} from './Boss';
+
 
 import Mongoose from 'mongoose';
-
 import BossModel from './Boss/DbModel';
 import CharacterModel from './Character/DbModel';
 import ClassModel from './Boss/DbModel';
@@ -46,7 +65,7 @@ process.on('SIGINT', () => {
     });
 });
 
-export const RPG = {
+export default {
     Boss,
     Character,
     Class,
@@ -55,6 +74,24 @@ export const RPG = {
     Inventory,
     Shop,
     Skill,
+};
+
+export {
+    FightToBoss,
+    GroupFightToBoss,
+
+    GetDropFromBoss,
+    GetFullDropFromBoss,
+    AddDropToBoss,
+    RemoveBossDrop,
+
+    GetBossFromName,
+    GetBossFromLevel,
+    GetAllBoss,
+    AddNewBoss,
+    AlterBoss,
+    RemoveBoss,
+
 
     BossModel,
     CharacterModel,
@@ -64,6 +101,4 @@ export const RPG = {
     InventoryModel,
     ShopModel,
     SkillModel,
-
-    db
-};
+}

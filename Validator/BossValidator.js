@@ -2,7 +2,7 @@
 /**
  * ValidateBossCharacter is a function
  * check if bossCharacter is valid
- * @param {Array} bossCharacter - Cotains informations about Boss
+ * @param {Object} bossCharacter - Cotains informations about Boss
  * @returns {Boolean}
  */
 export function ValidateBossCharacter(bossCharacter) {

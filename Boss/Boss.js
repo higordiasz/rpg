@@ -1,4 +1,4 @@
-import { ValidateBossCharacter } from '../Validator/BossValidator';
+import { ValidateBossCharacter } from '../Validator';
 import Mongoose from 'mongoose';
 const BossDB = Mongoose.model('BossModel');
 
@@ -55,7 +55,6 @@ export function GetBossFromName (bossName) {
     if (found)
         return {message: 'Found', boss: found};
     return {message: 'No have boss with name in DB', boss: null};
-
 }
 
 /**
@@ -74,9 +73,9 @@ export function GetAllBoss () {
  * add a new boss in database
  * @param {String} bossName - Name of boss
  * @param {Number} bossLevel - Level of boss
- * @param {Array} bossDrop - List of drops
+ * @param {Object} bossDrop - List of drops
  * @param {String} bossDificulty - Dificulty of boss ('easy', 'medium', 'hard') is only cosmetic
- * @param {Array} bossCharacter - List of all caracteristcs of boss
+ * @param {Object} bossCharacter - List of all caracteristcs of boss
  */
 export function AddNewBoss (bossName, bossLevel, bossDrop, bossDificulty, bossCharacter) {
     if (!bossName || !bossLevel || !bossDrop || !bossDificulty || !bossCharacter)
@@ -91,12 +90,12 @@ export function AddNewBoss (bossName, bossLevel, bossDrop, bossDificulty, bossCh
  * from database
  * @param {String} bossName - Name of boss
  * @param {Number} bossLevel - Level of boss
- * @param {Array} bossDrop - List of drops
+ * @param {Object} bossDrop - List of drops
  * @param {String} bossDificulty - Dificulty of boss ('easy', 'medium', 'hard') is only cosmetic
- * @param {Array} bossCharacter - List of all caracteristcs of boss
+ * @param {Object} bossCharacter - List of all caracteristcs of boss
  * @param {String} newName - New name of boss if you want to change
  */
-export function AlterBoss (bossName, bossLevel = null, bossDrop = null, bossDificulty = null, bossCharacter = null, newName = null) {
+export function AlterBoss (bossName, bossLevel = null, bossDrop = null, bossDificulty = null, bossCharacter = null,  newName = null) {
 
 }
 
