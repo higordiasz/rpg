@@ -15,10 +15,18 @@ npm install rpg-mavis --save
 ### Import Functions from RPG
 
 ```js
-import { Boss, Character, Craft, Hunt, Inventory, Shop, Skill} from 'rpg-mavis';
+import { RPG } from 'rpg-mavis';
 
 // Do something with functions
 
 ```
 
 ### Instance methods
+
+* [.Boss.GetBossFromLevel(level)](#GetBossFromLevel)
+* [.Boss.GetBossFromName(bossName)](#GetBossFromLevel)
+* [.Boss.GetAllBoss()](#GetBossFromLevel)
+* [.Boss.AddNewBoss(bossName, bossLevel, bossDrop, bossDificulty, bossCharacter)](#GetBossFromLevel)
+* [.Boss.AlterBoss(bossName)](#GetBossFromLevel)
+* [.Boss.RemoveBoss(bossName)](#GetBossFromLevel)
+
