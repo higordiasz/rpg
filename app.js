@@ -26,7 +26,6 @@ import {
     RemoveBoss,
 } from './Boss';
 
-
 import Mongoose from 'mongoose';
 import BossModel from './Boss/DbModel';
 import CharacterModel from './Character/DbModel';

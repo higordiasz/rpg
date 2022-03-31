@@ -75,7 +75,7 @@ export function BossDrop(dropArray = []) {
                 if(ValidateItemDrop(itemDrop))
                     aux.push(itemDrop);
             })
-            this.droplist = aux;
+            this.dropList = aux;
             this.dropCount = aux.length;
         }
     }

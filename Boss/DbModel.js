@@ -28,6 +28,11 @@ const BossSchema = new Schema({
         required: true
     },
 
+    bossExp: {
+        type: Number,
+        required: true
+    },
+
 })
 
 module.exports = Mongoose.model('BossModel', BossSchema)
